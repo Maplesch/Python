@@ -6,6 +6,7 @@ def anagramm(wort_1, wort_2):
 
     if laenge_1 != laenge_2:
         print("Das Wortpaar " + wort_1 + " und " + wort_2 + " ist kein Anagramm.")
+        return              # return beendet unteranderem die function (wie break eine schleife). mit return kann man zusaetzlich werte aus der funktion in den ueberliegenden code transportieren, welcher die funktion benutzt, was du bereits mit "wahl = input("Ana...") gemacht hast. der wert, welcher hinter return steht wird von der funktion zurueckgegeben (dieser steht dann zur laufzeit dort, wo die funktion aufgerufen wurde, nach dem diese ausgefuehrt wurde). er kann dann einer variable zugewiesen werden, oder einfach nicht benutzt werden.
     else:
         c1 = Counter(wort_1)
         c2 = Counter(wort_2)
